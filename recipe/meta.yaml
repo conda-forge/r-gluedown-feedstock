@@ -1,4 +1,4 @@
-{% set version = '1.0.2' %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gluedown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gluedown/gluedown_{{ version }}.tar.gz
-  sha256: e93a8e1185e28b0ec5da71b5358aa9893b21b7bd3efd2379fbb9484ef9fb05ef
+  sha256: a50554c224126fde14e83c194d8f1f286886a712869439e70faae71cf689ec73
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -26,9 +26,11 @@ requirements:
   host:
     - r-base
     - r-glue >=1.3.1
+    - r-magrittr >=2.0.1
   run:
     - r-base
     - r-glue >=1.3.1
+    - r-magrittr >=2.0.1
 
 test:
   commands:
@@ -37,15 +39,12 @@ test:
 
 about:
   home: https://kiernann.com/gluedown/, https://github.com/kiernann/gluedown/
-  license: GPL-3
-  summary: Ease the transition between R vectors and markdown text. With 'gluedown' and 'rmarkdown',
-    users can create traditional vectors in R, glue those strings together with the
-    markdown syntax, and print those formatted vectors directly to the document. This
-    package primarily uses GitHub Flavored Markdown (GFM), an offshoot of the unambiguous
-    CommonMark specification by John MacFarlane (2019) <https://spec.commonmark.org/>.
+  license: GPL-3.0-only
+  summary: Ease the transition between R vectors and markdown text. With 'gluedown' and 'rmarkdown', users can create traditional vectors in R, glue those strings together with the markdown syntax, and print those formatted vectors directly to the document. This package primarily uses GitHub Flavored Markdown (GFM), an offshoot
+    of the unambiguous CommonMark specification by John MacFarlane (2019) <https://spec.commonmark.org/>.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
