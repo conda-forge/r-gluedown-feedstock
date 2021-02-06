@@ -5,11 +5,9 @@ Home: https://kiernann.com/gluedown/, https://github.com/kiernann/gluedown/
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gluedown-feedstock/blob/master/LICENSE.txt)
 
 Summary: Ease the transition between R vectors and markdown text. With 'gluedown' and 'rmarkdown', users can create traditional vectors in R, glue those strings together with the markdown syntax, and print those formatted vectors directly to the document. This package primarily uses GitHub Flavored Markdown (GFM), an offshoot of the unambiguous CommonMark specification by John MacFarlane (2019) <https://spec.commonmark.org/>.
-
-
 
 Current build status
 ====================
