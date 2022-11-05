@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gluedown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gluedown/gluedown_{{ version }}.tar.gz
-  sha256: e1ffc274eee0073f1962c36ce7f8779c1ea5b192bccdc4ebbd95b07904536ae7
+  sha256: f4015ba598b6c306fec60c5e07151f2874b1359be0e23c6ac9e239c2a42dc737
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
